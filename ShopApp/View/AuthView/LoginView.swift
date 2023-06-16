@@ -9,10 +9,9 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @Binding var currentShowingView: String
+    @EnvironmentObject private var coordinator: Coordinator
     
-    @State private var email = ""
-    @State private var password = ""
+    @StateObject var viewModel: AuthViewModel
     
     var body: some View {
         ZStack {
@@ -33,14 +32,14 @@ struct LoginView: View {
                 
                 HStack {
                     Image(systemName: "mail")
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $viewModel.email)
                     
                     Spacer()
                     
-                    if email.count != 0 {
-                        Image(systemName: email.isValidEmail() ? "checkmark" : "xmark")
+                    if viewModel.email.count != 0 {
+                        Image(systemName: viewModel.email.isValidEmail() ? "checkmark" : "xmark")
                             .fontWeight(.bold)
-                            .foregroundColor(email.isValidEmail() ? .green : .red)
+                            .foregroundColor(viewModel.email.isValidEmail() ? .green : .red)
                     }
                     
                 }
@@ -54,14 +53,14 @@ struct LoginView: View {
                 
                 HStack {
                     Image(systemName: "lock")
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $viewModel.password)
                     
                     Spacer()
                     
-                    if password.count != 0 {
-                        Image(systemName: password.isValidPassword(password) ? "checkmark" : "xmark")
+                    if viewModel.password.count != 0 {
+                        Image(systemName: viewModel.password.isValidPassword(viewModel.password) ? "checkmark" : "xmark")
                             .fontWeight(.bold)
-                            .foregroundColor(password.isValidPassword(password) ? .green : .red)
+                            .foregroundColor(viewModel.password.isValidPassword(viewModel.password) ? .green : .red)
                     }
                     
                 }
@@ -74,9 +73,8 @@ struct LoginView: View {
                 .padding()
                 
                 Button("Don't have an account?") {
-                    withAnimation {
-                        self.currentShowingView = "signup"
-                    }
+                    coordinator.push(.singup)
+                        
                 }
                 .foregroundColor(.black.opacity(0.7))
                 
@@ -111,6 +109,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(currentShowingView: .constant(""))
+        LoginView(viewModel: AuthViewModel())
     }
 }
