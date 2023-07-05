@@ -6,9 +6,9 @@
 
 **Main Screens**:
 
-| ![Gif0](https://github.com/vel9988/ShopApp/assets/58105647/683fa04f-381d-4c65-b5e3-adabb7fad6d5) | 
-![Gif1](https://github.com/vel9988/ShopApp/assets/58105647/cfb0b8b1-af78-4e75-8d1f-96651604ea18) | 
-![Gif2](https://github.com/vel9988/ShopApp/assets/58105647/392cb2b0-e4a6-4393-9863-e9446fa3627f) |
+| ![Gif0](https://github.com/vel9988/ShopApp/assets/58105647/0a7f8456-bfa8-4db9-8813-215ca5a84699)
+| ![Gif1](https://github.com/vel9988/ShopApp/assets/58105647/c3233353-6086-4dc3-9810-096e959f88cf)
+| ![Gif2](https://github.com/vel9988/ShopApp/assets/58105647/9041a0c7-a1e7-4ada-ae45-1e8984f6c58c)
 
 
 
