@@ -1,7 +1,7 @@
 # ShopApp
 
 **Description**: An application that simulates the appearance of an online store
-Implemented user interface via code (SwiftUI)
+**What was done**: Implemented user interface via code (SwiftUI)
 
 **Main Screens**:
 
