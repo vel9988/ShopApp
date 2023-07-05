@@ -14,49 +14,8 @@ struct Test: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text(scrollName)
-                    .font(.headline)
-                Spacer()
-                Button("View all") {
-                    
-                }
-                .foregroundColor(.gray)
-            }
-            .padding(.leading)
-            .padding(.trailing)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 10) {
-                    Button {
-                        
-                    } label: {
-                        ProductCard(product: viewModel.phonesProduct[0])
-                    }
-                    
-                    Button {
-                        
-                    } label: {
-                        ProductCard(product: viewModel.phonesProduct[1])
-                    }
-                    
-                    Button {
-                        
-                    } label: {
-                        ProductCard(product: viewModel.phonesProduct[2])
-                    }
-
-
-
-                    
-                }
-                .padding(.leading)
-                Spacer()
-            }
-            
             
         }
-        
     }
 }
 

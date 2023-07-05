@@ -73,7 +73,7 @@ struct LoginView: View {
                 .padding()
                 
                 Button("Don't have an account?") {
-                    coordinator.push(.singup)
+                    coordinator.present(fullScreenCover: .singup)
                         
                 }
                 .foregroundColor(.black.opacity(0.7))

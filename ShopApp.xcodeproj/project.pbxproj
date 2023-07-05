@@ -30,6 +30,7 @@
 		EA7CA10D2A31BF3A00CD9A30 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CA10C2A31BF3A00CD9A30 /* AuthViewModel.swift */; };
 		EA7CA1102A31C76400CD9A30 /* ContentViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CA10F2A31C76400CD9A30 /* ContentViewModelProtocol.swift */; };
 		EA7CA1122A31C7EB00CD9A30 /* ContentFlowStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CA1112A31C7EB00CD9A30 /* ContentFlowStateProtocol.swift */; };
+		EA9210B32A3C99DA00BB6B7B /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9210B22A3C99DA00BB6B7B /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		EA7CA10C2A31BF3A00CD9A30 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		EA7CA10F2A31C76400CD9A30 /* ContentViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModelProtocol.swift; sourceTree = "<group>"; };
 		EA7CA1112A31C7EB00CD9A30 /* ContentFlowStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFlowStateProtocol.swift; sourceTree = "<group>"; };
+		EA9210B22A3C99DA00BB6B7B /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				EA1882142A3847AE00900BAC /* MainView.swift */,
 				EA7A324F2A38A0D600EDADC4 /* HomeView.swift */,
 				EA1882162A384FD100900BAC /* ProfileView.swift */,
+				EA9210B22A3C99DA00BB6B7B /* DetailsView.swift */,
 				EA7A32532A38AEE500EDADC4 /* Test.swift */,
 			);
 			path = CoreView;
@@ -299,6 +302,7 @@
 				EA1882152A3847AE00900BAC /* MainView.swift in Sources */,
 				EA7CA0F12A31B8A100CD9A30 /* ShopAppApp.swift in Sources */,
 				EA7A324E2A385C9400EDADC4 /* ProfileViewModel.swift in Sources */,
+				EA9210B32A3C99DA00BB6B7B /* DetailsView.swift in Sources */,
 				EA7A32602A3AF7A800EDADC4 /* ProductAPI.swift in Sources */,
 				EA7CA1122A31C7EB00CD9A30 /* ContentFlowStateProtocol.swift in Sources */,
 				EA7A32522A38A32700EDADC4 /* HomeViewModel.swift in Sources */,

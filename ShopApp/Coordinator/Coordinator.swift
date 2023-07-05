@@ -7,8 +7,16 @@
 
 import SwiftUI
 
-enum AuthPage: String, Identifiable {
+enum Page: String, Identifiable {
     case login
+    case main
+    
+    var id: String {
+        self.rawValue
+    }
+}
+
+enum FullScreenCover: String, Identifiable {
     case singup
     
     var id: String {
@@ -18,10 +26,17 @@ enum AuthPage: String, Identifiable {
 
 class Coordinator: ObservableObject {
     
-    @Published var path = NavigationPath()
+    @State var authState: Bool = true
     
-    func push(_ page: AuthPage) {
+    @Published var path = NavigationPath()
+    @Published var fullScreenCover: FullScreenCover?
+    
+    func push(_ page: Page) {
         path.append(page)
+    }
+    
+    func present(fullScreenCover: FullScreenCover) {
+        self.fullScreenCover = fullScreenCover
     }
     
     func pop() {
@@ -32,15 +47,27 @@ class Coordinator: ObservableObject {
         path.removeLast(path.count)
     }
     
+    func dismissFullScreenCover() {
+        self.fullScreenCover = nil
+    }
+    
     @ViewBuilder
-    func build(page: AuthPage) -> some View {
+    func build(page: Page) -> some View {
         switch page {
         case .login:
             ScreenFactory.share.create(view: .login)
                 .preferredColorScheme(.light)
+        case .main:
+            ScreenFactory.share.create(view: .main)
+        }
+    }
+    @ViewBuilder
+    func build(fullScreenCover: FullScreenCover) -> some View {
+        switch fullScreenCover {
         case .singup:
-            ScreenFactory.share.create(view: .signup)
-                .preferredColorScheme(.dark)
+            NavigationStack {
+                ScreenFactory.share.create(view: .signup)
+            }
         }
     }
     

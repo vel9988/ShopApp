@@ -76,7 +76,7 @@ struct SignupView: View {
                 .padding()
                 
                 Button("Already have an account?") {
-                    coordinator.popToRoot()
+                    coordinator.dismissFullScreenCover()
                 }
                 .foregroundColor(.gray)
                 

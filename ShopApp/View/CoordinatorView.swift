@@ -12,10 +12,20 @@ struct CoordinatorView: View {
     
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            coordinator.build(page: .login)
-                .navigationDestination(for: AuthPage.self) { page in
-                    coordinator.build(page: page)
-                }
+            if coordinator.authState {
+                coordinator.build(page: .main)
+                    .navigationDestination(for: Page.self) { page in
+                        coordinator.build(page: page)
+                    }
+            } else {
+                coordinator.build(page: .login)
+                    .navigationDestination(for: Page.self) { page in
+                        coordinator.build(page: page)
+                    }
+                    .fullScreenCover(item: $coordinator.fullScreenCover) { fullScreenCover in
+                        coordinator.build(fullScreenCover: fullScreenCover)
+                    }
+            }
         }
         .environmentObject(coordinator)
     }

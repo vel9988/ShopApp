@@ -10,6 +10,7 @@ import SwiftUI
 enum Screen {
     case login
     case signup
+    case main
     case home
     case profile
 }
@@ -27,6 +28,8 @@ final class ScreenFactory {
             return AnyView(HomeView(viewModel: HomeViewModel()))
         case .profile:
             return AnyView(ProfileView(viewModel: ProfileViewModel()))
+        case .main:
+            return AnyView(MainView())
         }
     }
     

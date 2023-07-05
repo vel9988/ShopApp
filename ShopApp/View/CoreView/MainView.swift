@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct MainView: View {
     
     @EnvironmentObject private var coordinator: Coordinator
+    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(.white)
+    }
     
     var body: some View {
         TabView {
@@ -25,9 +28,7 @@ struct MainView: View {
                 }
             
         }
-//        .toolbarBackground(.red, for: .tabBar)
-        .edgesIgnoringSafeArea(.all)
-//        .accentColor(.gray)
+        .accentColor(.black)
         
     }
 }
